@@ -18,7 +18,7 @@
 
 ~~`use_nomad：`新增的代码文件夹，里面是我们自己的做法。~~
 
-`evaluation_plots` ： 测试的输出结果
+`train/evaluation_plots` ： 测试的输出结果
 
 ### 数据集介绍：
 
