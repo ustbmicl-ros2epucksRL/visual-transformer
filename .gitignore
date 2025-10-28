@@ -1,15 +1,10 @@
-train/logs/*
-train/datasets/*
-train/vint_train/data/data_splits/*
-train/wandb/*
-train/gnm_dataset/*
-*_test.yaml
 
-*.png
-*.jpg
-*.pth
-*.mp4
-*.gif
+# train/logs/*
+# train/datasets/*
+# train/vint_train/data/data_splits/*
+# train/wandb/*
+# train/gnm_dataset/*
+# *_test.yaml
 
 deployment/model_weights/*
 deployment/topomaps/*

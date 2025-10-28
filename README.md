@@ -108,6 +108,7 @@ python train/evaluate_nomad.py --config-path "config/nomad.yaml"
 **测试结果:**
 
 已提供的nomad.pth模型有些失效，预测的点几乎都是在0左右。输出在`train/evaluation_plots`文件夹下。
+作为一个测试
 
 
 
