@@ -18,7 +18,9 @@
 
 ~~`use_nomad：`新增的代码文件夹，里面是我们自己的做法。~~
 
-`train/evaluation_plots` ： 测试的输出结果
+`train/evaluation_plots` ： 测试的输出对比结果。
+
+`Nomad.pdf`:  **该代码对应的论文**。
 
 ### 数据集介绍：
 
