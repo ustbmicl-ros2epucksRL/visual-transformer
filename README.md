@@ -114,5 +114,26 @@ python train/evaluate_nomad.py --config-path "config/nomad.yaml"
 已提供的nomad.pth模型有些失效，预测的点几乎都是在0左右。输出在`train/evaluation_plots`文件夹下。
 作为一个测试
 
+### 新的更新
 
+**VINT模型论文的思维导图：**
 
+![image-20251104162635979](https://store-image-mj.oss-cn-beijing.aliyuncs.com/img/image-20251104162635979.png)
+
+**Nomad论文的思维导图：**
+
+![image-20251104162721454](https://store-image-mj.oss-cn-beijing.aliyuncs.com/img/image-20251104162721454.png)
+
+1. **subgoal diffsuion本身能做什么？**
+
+Subgoal Diffusion 本质是一种图像到图像的条件生成模型，其**核心功能是 “基于当前环境视觉观测，生成符合物理规律的短期子目标图像**”，Subgoal Diffusion 能以当前图像（`o_t`）为条件，生成 5-20 步后机器人可能到达的 “潜在子目标图像”。
+
+2. **VINT中使用subgoal diffusion** 
+
+   输入：当前视觉观测图像（`o_t`）
+
+   输出：可达的候选子目标图像集合（`S = {s_1, s_2, ..., s_K}`）
+
+   生成的候选子目标并非直接用于导航， ViNT 计算每个子目标与当前位置的 “动态距离（到达所需时间步）” 和 “初步动作序列”，筛选掉不可达的无效子目标，再结合启发式函数（如 GPS、卫星图像）评分，最终选择最优子目标输入 ViNT 生成执行动作。
+
+   
