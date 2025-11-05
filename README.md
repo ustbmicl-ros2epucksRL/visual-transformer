@@ -153,11 +153,8 @@ Subgoal Diffusion 本质是一种图像到图像的条件生成模型，其**核
 
 5. **loss函数具体是怎么更新的？**
 
-$$
-\mathcal{L}_{\text{NoMaD}}(\phi,\psi,f,\theta,f_d)
-= \mathrm{MSE}\!\left(\varepsilon_\xi^{k},\, \varepsilon_{\theta}\!\left(c_t,\, a_t^{0}+\varepsilon_\xi^{k},\, k\right)\right)
-+ \lambda \cdot \mathrm{MSE}\!\left(d(o_t,o_g),\, f_d(c_t)\right)
-$$
+​		$\mathcal{L}_{\text{NoMaD}}(\phi,\psi,f,\theta,f_d)
+= \mathrm{MSE}\!\left(\varepsilon_\xi^{k},\, \varepsilon_{\theta}\!\left(c_t,\, a_t^{0}+\varepsilon_\xi^{k},\, k\right)\right)\lambda \cdot \mathrm{MSE}\!\left(d(o_t,o_g),\, f_d(c_t)\right)$
 
 代码中对应的是：
 
